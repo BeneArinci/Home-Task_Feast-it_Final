@@ -1,0 +1,8 @@
+#navigation-bar {
+  display: flex;
+  text-align: left;
+  padding-left: 2%;
+  width: 100%;
+  -webkit-text-size-adjust: auto;
+  background-color: whitesmoke;
+}

@@ -1,8 +1,9 @@
 import React from 'react';
+import './NavBar.css'
 
 const NavBar = () => {
   return(
-    <nav style= {{display:"flex", textAlign:"left", marginLeft:"2%"}}>
+    <nav id="navigation-bar">
       <p>Welcome,
       <span className = "f5 link dim black underline pa1 pointer">log in</span>
       or
