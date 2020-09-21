@@ -24,11 +24,21 @@ class App extends React.Component {
     .then(() => console.log(this.state.providers[0].dietary))
   }
 
+  onFilterSelect = (filterby) => {
+    fetch(`https://api-staging.feast-it.com/suppliers/browse/search?tier1=${filterby}`)
+    .then((response) => {
+      return response.json()
+    }) 
+    .then((data) => {
+      this.setState({providers: data.results})
+    })
+  }
+
   render() {
     return (
     <div className="App">
       <NavBar />
-      <Filter />
+      <Filter onFilterSelect = {this.onFilterSelect}/>
       <ProvidersList providers = {this.state.providers}/>
     </div>
     )
