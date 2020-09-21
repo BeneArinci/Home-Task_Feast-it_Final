@@ -17,7 +17,7 @@ componentDidMount() {
   .then((data) => {
     this.setState({providers: data.results})
   })
-  .then(() => console.log(this.state.providers))
+  .then(() => console.log(this.state.providers[0].dietary))
 }
 
 
@@ -33,6 +33,7 @@ componentDidMount() {
                 name = {provider.name}
                 shortDescription = {provider.tags[0].name}
                 image = {provider.public.images[0].url}
+                tags = {provider.dietary}
               />
             )
           })

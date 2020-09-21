@@ -1,7 +1,8 @@
 import React from 'react';
 import './ProviderCard.css'
+import TagsList from '../TagsList/TagsList'
 
-const ProviderCard = ({name, shortDescription, image}) => {
+const ProviderCard = ({name, shortDescription, image, tags}) => {
   return (
     <article className="tl br4 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center bg-washed-yellow ma2" style={{minWidth: "40%"}}>
       <div className= "container">
@@ -14,10 +15,12 @@ const ProviderCard = ({name, shortDescription, image}) => {
             <h1 className="orange pa2 f5 f4-ns mv0">{name}</h1>
           </div>
         </div>
-        <div className="pa2 dtc tr">
+        <div className="pa2 dtc" >
             <h2 className="f5 mv0">{shortDescription}</h2>
         </div>
-        <div className = "pa2"> tags </div>
+        <div className = "pa2"> 
+          <TagsList tags={tags} /> 
+        </div>
       </div>
     </article>
   )

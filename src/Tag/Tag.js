@@ -1,10 +1,11 @@
 import React from 'react';
+import './Tag.css'
 
 
-const Tag = ({tag}) => {
+const Tag = ({name}) => {
   return(
-    <div className = "container">
-      {tag.name}
+    <div className = "single-tag">
+      {name}
     </div>
   )
 }
