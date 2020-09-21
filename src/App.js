@@ -6,12 +6,30 @@ import Filter from './Filter/Filter'
 
 
 class App extends React.Component {
+  constructor () {
+    super()
+    this.state = {
+      providers: []
+    }
+  }
+
+  componentDidMount() {
+    fetch("https://api-staging.feast-it.com/suppliers/browse/search")
+    .then((response) => {
+      return response.json()
+    }) 
+    .then((data) => {
+      this.setState({providers: data.results})
+    })
+    .then(() => console.log(this.state.providers[0].dietary))
+  }
+
   render() {
     return (
     <div className="App">
       <NavBar />
       <Filter />
-      <ProvidersList />
+      <ProvidersList providers = {this.state.providers}/>
     </div>
     )
   }
