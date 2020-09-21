@@ -4,6 +4,7 @@ import NavBar from './NavBar/NavBar'
 import ProvidersList from './ProvidersList/ProvidersList'
 import Filter from './Filter/Filter'
 import Scroll from './Scroll/Scroll'
+import LogIn from './LogIn/LogIn'
 
 
 class App extends React.Component {
@@ -39,6 +40,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <NavBar />
+      <LogIn />
       <Filter onFilterSelect = {this.onFilterSelect}/>
       <Scroll>
         <ProvidersList providers = {this.state.providers}/> 

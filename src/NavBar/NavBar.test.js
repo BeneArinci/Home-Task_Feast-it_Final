@@ -6,8 +6,6 @@ test('renders nav bar with welcome message plus links for sign up or log in', ()
   render(<NavBar />);
   const welcomeMessage = screen.getByText(/Welcome,/i)
   const logIn = screen.getByText(/Log In/i)
-  const signUp = screen.getByText(/Sign Up/i)
   expect(welcomeMessage).toBeInTheDocument();
   expect(logIn).toBeInTheDocument();
-  expect(signUp).toBeInTheDocument();
 });
