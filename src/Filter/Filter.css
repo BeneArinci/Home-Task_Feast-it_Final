@@ -1,0 +1,7 @@
+button {
+  min-width: 10rem;
+}
+
+.buttons {
+  align-items: center
+}
