@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 import NavBar from './NavBar/NavBar'
-import ProviderCard from './ProviderCard/ProviderCard'
+import ProvidersList from './ProvidersList/ProvidersList'
+
 
 class App extends React.Component {
   render() {
     return (
     <div className="App">
       <NavBar />
-      <ProviderCard />
+      <ProvidersList />
     </div>
     )
   }
