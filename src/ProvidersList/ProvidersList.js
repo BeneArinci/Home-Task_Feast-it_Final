@@ -23,7 +23,7 @@ componentDidMount() {
 
   render ()  {
     return (
-      <div className = "flex flex-wrap ">
+      <div className = "flex flex-wrap">
         {
 
           this.state.providers.map((provider, i) => {
