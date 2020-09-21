@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './NavBar/NavBar'
 import ProvidersList from './ProvidersList/ProvidersList'
 import Filter from './Filter/Filter'
+import Scroll from './Scroll/Scroll'
 
 
 class App extends React.Component {
@@ -39,7 +40,11 @@ class App extends React.Component {
     <div className="App">
       <NavBar />
       <Filter onFilterSelect = {this.onFilterSelect}/>
-      <ProvidersList providers = {this.state.providers}/>
+      <Scroll>
+        <ProvidersList providers = {this.state.providers}/> 
+      </Scroll>
+      
+      
     </div>
     )
   }

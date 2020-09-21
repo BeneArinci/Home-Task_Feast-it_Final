@@ -7,7 +7,7 @@ const Filter = ({onFilterSelect}) => {
       <p className="tc"> 
         Filter By:
       </p>
-      <div className="buttons flex justify-center">
+      <div className="buttons flex justify-center flex-wrap">
         <button 
           className="f6 br4 pointer grow link dim ba bw1 ph3 pv2 mb2 dib dark-pink bg-yellow ba b--dark-pink shadow-3 ma2" value="Food"
           onClick={ () => onFilterSelect("food") }>
