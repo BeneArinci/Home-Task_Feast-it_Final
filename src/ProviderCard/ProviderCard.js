@@ -5,7 +5,7 @@ const ProviderCard = ({name, shortDescription, image}) => {
   return (
     <article className="tl br4 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center bg-washed-yellow ma2" style={{minWidth: "40%"}}>
       <div className= "container">
-      <img src={`${image}`} className="img db w-100 br2 br--top" alt="kitten" style={{width:"100%", maxHeight:"auto"}}/>
+      <img src={`${image}`} className="img db w-100 br2 br--top" alt={`${name}`} style={{width:"100%", maxHeight:"auto"}}/>
       </div>
       
       <div className="pa2 ph3-ns pb3-ns">
