@@ -11,7 +11,8 @@ class App extends React.Component {
   constructor () {
     super()
     this.state = {
-      providers: []
+      providers: [],
+      route: "home"
     }
   }
 
@@ -36,17 +37,24 @@ class App extends React.Component {
     })
   }
 
+  onRouteChange = (route) => {
+    this.setState({route: route})
+    console.log(this.state.route)
+  }
+
   render() {
     return (
     <div className="App">
-      <NavBar />
-      <LogIn />
-      <Filter onFilterSelect = {this.onFilterSelect}/>
-      <Scroll>
-        <ProvidersList providers = {this.state.providers}/> 
-      </Scroll>
-      
-      
+      { this.state.route === "logIn" 
+        ?  <LogIn />
+        : <div>
+          <NavBar onRouteChange = {this.onRouteChange}/>
+            <Filter onRouteChange = {this.onRouteChange} onFilterSelect = {this.onFilterSelect}/>
+            <Scroll>
+              <ProvidersList onRouteChange = {this.onRouteChange} providers = {this.state.providers}/> 
+            </Scroll>
+        </div>
+     } 
     </div>
     )
   }
