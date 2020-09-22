@@ -68,5 +68,14 @@ test ('shows florists suppliers when "florists" selection is made', async () =>{
   expect(element).toBeInTheDocument()
 })
 
+test ('user is sent to the login page if clicking on login', () => {
+  render(<App />)
+  const logInLink = screen.getByTestId("log-in-link")
+  logInLink.click()
+  const logInForm = screen.getByTestId("log-in-form")
+  screen.debug()
+  expect(logInForm).toBeInTheDocument()
+})
+
 
 

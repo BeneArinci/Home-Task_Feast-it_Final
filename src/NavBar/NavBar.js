@@ -7,6 +7,7 @@ const NavBar = ({onRouteChange}) => {
       <p>Welcome,
       <span 
         className = "f5 link dim black underline pa1 pointer"
+        data-testid="log-in-link"
         onClick={ () => onRouteChange("logIn")}>
         log in
       </span>
