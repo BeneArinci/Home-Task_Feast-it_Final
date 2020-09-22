@@ -1,7 +1,7 @@
 import React from 'react';
 import SupplierCard from '../SupplierCard/SupplierCard'
 
-const ProvidersList = ({providers, onRouteChange}) =>{
+const SuppliersList = ({providers, onRouteChange}) =>{
 
     return (
       <div className = "flex flex-wrap">
@@ -20,9 +20,7 @@ const ProvidersList = ({providers, onRouteChange}) =>{
           })
         }
      </div>
-  
-    )  
-  
+    )   
 }
 
-export default ProvidersList
+export default SuppliersList

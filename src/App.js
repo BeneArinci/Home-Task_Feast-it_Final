@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBar from './NavBar/NavBar'
-import ProvidersList from './ProvidersList/ProvidersList'
+import SuppliersList from './SuppliersList/SuppliersList'
 import Filter from './Filter/Filter'
 import Scroll from './Scroll/Scroll'
 import LogIn from './LogIn/LogIn'
@@ -51,7 +51,7 @@ class App extends React.Component {
           <NavBar onRouteChange = {this.onRouteChange}/>
             <Filter onRouteChange = {this.onRouteChange} onFilterSelect = {this.onFilterSelect}/>
             <Scroll>
-              <ProvidersList onRouteChange = {this.onRouteChange} providers = {this.state.providers}/> 
+              <SuppliersList onRouteChange = {this.onRouteChange} providers = {this.state.providers}/> 
             </Scroll>
         </div>
      } 
