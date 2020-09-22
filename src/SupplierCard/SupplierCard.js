@@ -1,8 +1,8 @@
 import React from 'react';
-import './ProviderCard.css'
+import './SupplierCard.css'
 import TagsList from '../TagsList/TagsList'
 
-const ProviderCard = ({name, shortDescription, image, tags, onRouteChange}) => {
+const SupplierCard = ({name, shortDescription, image, tags, onRouteChange}) => {
   return (
     <article 
     className="grow shadow-4 pointer br4 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center bg-washed-yellow ma2" style={{minWidth: "40%"}}
@@ -30,4 +30,4 @@ const ProviderCard = ({name, shortDescription, image, tags, onRouteChange}) => {
   )
 }
 
-export default ProviderCard
+export default SupplierCard

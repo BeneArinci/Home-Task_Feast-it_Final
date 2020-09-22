@@ -1,5 +1,5 @@
 import React from 'react';
-import ProviderCard from '../ProviderCard/ProviderCard'
+import SupplierCard from '../SupplierCard/SupplierCard'
 
 const ProvidersList = ({providers, onRouteChange}) =>{
 
@@ -8,7 +8,7 @@ const ProvidersList = ({providers, onRouteChange}) =>{
         {
           providers.map((provider, i) => {
             return (
-              <ProviderCard 
+              <SupplierCard 
                 key = {i}
                 name = {provider.name}
                 shortDescription = {provider.tags[0].name}
