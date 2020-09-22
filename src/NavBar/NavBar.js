@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css'
+import './NavBar.css';
 
 const NavBar = ({onRouteChange}) => {
   return(
@@ -14,7 +14,7 @@ const NavBar = ({onRouteChange}) => {
       to visualise more contents
     </p>
     </nav>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

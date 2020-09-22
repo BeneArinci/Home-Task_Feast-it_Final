@@ -1,5 +1,5 @@
 import React from 'react';
-import './Filter.css'
+import './Filter.css';
 
 const Filter = ({onFilterSelect}) => {
   return(
@@ -36,10 +36,8 @@ const Filter = ({onFilterSelect}) => {
           Audio-Visual
         </button>
       </div>
-      
-      
     </div>
-  )
+  );
 }
 
-export default Filter
+export default Filter;

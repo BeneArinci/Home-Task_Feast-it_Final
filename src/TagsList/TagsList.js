@@ -1,5 +1,5 @@
 import React from 'react';
-import Tag from '../Tag/Tag'
+import Tag from '../Tag/Tag';
 
 
 const TagsList = ({tags}) => {
@@ -16,7 +16,7 @@ const TagsList = ({tags}) => {
       })
     }
  </div>
-  )
+  );
 }
 
-export default TagsList
+export default TagsList;

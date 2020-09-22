@@ -1,5 +1,5 @@
 import React from 'react';
-import SupplierCard from '../SupplierCard/SupplierCard'
+import SupplierCard from '../SupplierCard/SupplierCard';
 
 const SuppliersList = ({suppliers, onRouteChange}) =>{
 
@@ -20,7 +20,7 @@ const SuppliersList = ({suppliers, onRouteChange}) =>{
           })
         }
      </div>
-    )   
+    );
 }
 
-export default SuppliersList
+export default SuppliersList;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Tag.css'
+import './Tag.css';
 
 
 const Tag = ({name}) => {
@@ -7,7 +7,7 @@ const Tag = ({name}) => {
     <div className = "single-tag gray">
       {name}
     </div>
-  )
+  );
 }
 
-export default Tag
+export default Tag;

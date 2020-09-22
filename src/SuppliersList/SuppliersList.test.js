@@ -102,8 +102,8 @@ test('renders a list of suppliers', () => {
     }
   ]
   render(<SuppliersList suppliers = {suppliers}/>);
-  const firstSupplier = screen.getByText(/Mock Pizzeria/i)
-  const secondSupplier = screen.getByText(/Mock Chipsy/i)
+  const firstSupplier = screen.getByText(/Mock Pizzeria/i);
+  const secondSupplier = screen.getByText(/Mock Chipsy/i);
   screen.debug()
   expect(firstSupplier).toBeInTheDocument();
   expect(secondSupplier).toBeInTheDocument();

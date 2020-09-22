@@ -1,6 +1,6 @@
 import React from 'react';
-import './SupplierCard.css'
-import TagsList from '../TagsList/TagsList'
+import './SupplierCard.css';
+import TagsList from '../TagsList/TagsList';
 
 const SupplierCard = ({name, shortDescription, image, tags, onRouteChange}) => {
   return (
@@ -28,7 +28,7 @@ const SupplierCard = ({name, shortDescription, image, tags, onRouteChange}) => {
         </div>
       </div>
     </article>
-  )
+  );
 }
 
-export default SupplierCard
+export default SupplierCard;
