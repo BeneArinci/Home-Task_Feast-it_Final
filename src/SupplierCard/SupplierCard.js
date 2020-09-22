@@ -5,6 +5,7 @@ import TagsList from '../TagsList/TagsList'
 const SupplierCard = ({name, shortDescription, image, tags, onRouteChange}) => {
   return (
     <article 
+    title = "supplier-card"
     className="grow shadow-4 pointer br4 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center bg-washed-yellow ma2" style={{minWidth: "40%"}}
     onClick={ () => onRouteChange("logIn")}>
       <div className= "container">

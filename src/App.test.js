@@ -5,9 +5,6 @@ import mockBasicResponse from '../__mocks__/api-response.json'
 import mockDrinkResponse from '../__mocks__/drink-api-response.json'
 import mockFloristsResponse from '../__mocks__/florists-api-response.json'
 
-
-
-
 test ('shows suppliers in the main page', async () =>{
   
   jest.spyOn(global, "fetch").mockImplementation(() => {
@@ -64,7 +61,6 @@ test ('shows florists suppliers when "florists" selection is made', async () =>{
   const floristsBtn = screen.getByRole("button", {name: /Florists/})
   floristsBtn.click()
   const element = await waitForElement(() => screen.getByText("AMORE FLOREALS MOCK"))
-  screen.debug()
   expect(element).toBeInTheDocument()
 })
 
@@ -72,6 +68,15 @@ test ('user is sent to the login page if clicking on login', () => {
   render(<App />)
   const logInLink = screen.getByTestId("log-in-link")
   logInLink.click()
+  const logInForm = screen.getByTestId("log-in-form")
+  expect(logInForm).toBeInTheDocument()
+})
+
+test ('user is sent to the login page when clicking on supplier when not already logged in', async () => {
+  render(<App />)
+
+  const supplier = await waitForElement(()=> screen.getAllByTitle("supplier-card")) 
+  supplier[0].click()
   const logInForm = screen.getByTestId("log-in-form")
   screen.debug()
   expect(logInForm).toBeInTheDocument()
