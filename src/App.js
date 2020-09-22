@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor () {
     super()
     this.state = {
-      providers: [],
+      suppliers: [],
       route: "home"
     }
   }
@@ -22,9 +22,8 @@ class App extends React.Component {
       return response.json()
     }) 
     .then((data) => {
-      this.setState({providers: data.results})
+      this.setState({suppliers: data.results})
     })
-    .then(() => console.log(this.state.providers[0].dietary))
   }
 
   onFilterSelect = (filterby) => {
@@ -33,13 +32,12 @@ class App extends React.Component {
       return response.json()
     }) 
     .then((data) => {
-      this.setState({providers: data.results})
+      this.setState({suppliers: data.results})
     })
   }
 
   onRouteChange = (route) => {
     this.setState({route: route})
-    console.log(this.state.route)
   }
 
   render() {
@@ -51,7 +49,7 @@ class App extends React.Component {
           <NavBar onRouteChange = {this.onRouteChange}/>
             <Filter onRouteChange = {this.onRouteChange} onFilterSelect = {this.onFilterSelect}/>
             <Scroll>
-              <SuppliersList onRouteChange = {this.onRouteChange} providers = {this.state.providers}/> 
+              <SuppliersList onRouteChange = {this.onRouteChange} suppliers = {this.state.suppliers}/> 
             </Scroll>
         </div>
      } 

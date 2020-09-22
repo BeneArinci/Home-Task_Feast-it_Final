@@ -1,19 +1,19 @@
 import React from 'react';
 import SupplierCard from '../SupplierCard/SupplierCard'
 
-const SuppliersList = ({providers, onRouteChange}) =>{
+const SuppliersList = ({suppliers, onRouteChange}) =>{
 
     return (
       <div className = "flex flex-wrap">
         {
-          providers.map((provider, i) => {
+          suppliers.map((supplier, i) => {
             return (
               <SupplierCard 
                 key = {i}
-                name = {provider.name}
-                shortDescription = {provider.tags[0].name}
-                image = {provider.public.images[0].url}
-                tags = {provider.dietary}
+                name = {supplier.name}
+                shortDescription = {supplier.tags[0].name}
+                image = {supplier.public.images[0].url}
+                tags = {supplier.dietary}
                 onRouteChange = {onRouteChange}
               />
             )

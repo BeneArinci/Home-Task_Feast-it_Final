@@ -16,7 +16,6 @@ test ('shows suppliers in the main page', async () =>{
   render(<App />)
 
   const element = await waitForElement(() => screen.getByText("I AM A TEST PROVIDER"))
-  screen.debug()
   expect(element).toBeInTheDocument()
 })
 
@@ -78,7 +77,6 @@ test ('user is sent to the login page when clicking on supplier when not already
   const supplier = await waitForElement(()=> screen.getAllByTitle("supplier-card")) 
   supplier[0].click()
   const logInForm = screen.getByTestId("log-in-form")
-  screen.debug()
   expect(logInForm).toBeInTheDocument()
 })
 
