@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## My Feast-It Home Task
 
-## Available Scripts
+I wanted to say thank you to Feast-it and the software engineering team for giving me the opportunity to work on this task, I really enjoyed it :smile:<br>
+I developed this web-app using create-react-app. In order to download this project and be up and running clone the repository and run:
+```
+npm install
+```
+
+#### Useful Scripts
 
 In the project directory, you can run:
 
-### `npm start`
-
+###### `npm start`
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
-
+###### `npm test`
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
+###### `npm run build`
 Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## User Stories
 
-### `npm run eject`
+My first goal for this project was to respond to the following user story: 
+```
+As a user
+I want to be able to see a list of suppliers before I sign up to the platform
+So that I get a good idea of the kind of suppliers I will be matched with
+```
+I fetched data from the provided API with a componentDidMount function so that, when the user opens the app is visualising the first 10 suppliers straight away. These suppliers are rendered thanks to the SuppliersList component and its children<br>
+In addition to that, I worked on another user story:
+```
+As a user
+I want to be able to see a more specific list of suppliers based on different tags
+So that I get a good idea of the kind of suppliers I will be matched with based on specific needs
+```
+In order to do this, I created onFilterChange function that takes a filter argument(string) and is fetching data from the API accordingly. I also created a Filter component with several buttons. Everyone of them is triggering the onFilterChange function passing a specific filter string onClick.<br>
+The last user story is the following:
+```
+As a user
+I want to be able to get to a log in page
+So that I sign in and get more information about specific suppliers
+```
+For making this happen I built a LogIn component that is rendering a log-in form. Then I set a new state for my App component. This state is called route and it's defaulting to "home". I created an onRouteChange function that is taking a route (string) as an argument and accordingly runs the SetState for the route state. Basically if the route changes from "home" to "logIn", the App component stop rendering the other components and renders just the LogIn one. <br>
+This LogIn component is not actually allowing the user to log in :smile: but he would be able to see the form by clicking on the log-in link in the NavBar component or by clicking on any displayed supplier.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
