@@ -46,5 +46,8 @@ So that I sign in and get more information about specific suppliers
 For making this happen I built a LogIn component that is rendering a log-in form. Then I set a new state for my App component. This state is called route and it's defaulting to "home". I created an onRouteChange function that is taking a route (string) as an argument and accordingly runs the SetState for the route state. Basically if the route changes from "home" to "logIn", the App component stop rendering the other components and renders just the LogIn one. <br>
 This LogIn component is not actually allowing the user to log in :smile: but he would be able to see the form by clicking on the log-in link in the NavBar component or by clicking on any displayed supplier.
 
+## Components
+<img src="https://github.com/BeneArinci/Home-Task_Feast-it/blob/master/public/images/ComponentsTree.png" width="500" height="auto">
 
-
+## How it looks :smile:
+<img src="https://github.com/BeneArinci/Home-Task_Feast-it/blob/master/public/images/app.png" width="1300" height="auto">
