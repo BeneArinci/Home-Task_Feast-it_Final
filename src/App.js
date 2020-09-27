@@ -45,7 +45,7 @@ class App extends React.Component {
     return (
     <div className="App">
       { this.state.route === "logIn" 
-        ?  <LogIn />
+        ?  <LogIn onRouteChange = {this.onRouteChange}/>
         : <div>
           <NavBar onRouteChange = {this.onRouteChange}/>
             <Filter onRouteChange = {this.onRouteChange} onFilterSelect = {this.onFilterSelect}/>

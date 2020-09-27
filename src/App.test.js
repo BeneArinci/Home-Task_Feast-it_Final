@@ -79,5 +79,16 @@ test ('user is sent to the login page when clicking on supplier when not already
   expect(logInForm).toBeInTheDocument();
 })
 
+test ('user is sent back to the home page after clicking back link in the log in form', async () => {
+  render(<App />);
+  const logInLink = screen.getByTestId("log-in-link");
+  logInLink.click();
+  const backBtn = screen.getByText("Back");
+  backBtn.click();
+  screen.debug()
+  const foodBtn = screen.getByRole("button", {name: /Food/});
+  expect(foodBtn).toBeInTheDocument();
+})
+
 
 

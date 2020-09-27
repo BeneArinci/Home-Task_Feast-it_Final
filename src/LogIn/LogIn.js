@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogIn = () => {
+const LogIn = ({onRouteChange}) => {
   return (
     <article className="br2 ba dark-gray b--black-10 shadow-2 mv4 w-100 w-50-m w-25-l mw5 center" data-testid = "log-in-form">
       <main className="pa4 black-80">
@@ -27,6 +27,13 @@ const LogIn = () => {
               href="#0" 
               className="f6 link dim black db pointer"
               > Register</p>
+          </div>
+          <div className="lh-copy mt3">
+            <p
+              href="#0" 
+              className="f6 link dim black db pointer"
+              onClick={ () => onRouteChange("Home")}
+              > Back</p>
           </div>
         </div>
       </main>
