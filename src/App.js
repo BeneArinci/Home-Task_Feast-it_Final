@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://api-staging.feast-it.com/suppliers/browse/search")
+    fetch("https://cors-anywhere.herokuapp.com/https://api-staging.feast-it.com/suppliers/browse/search")
     .then((response) => {
       return response.json()
     })
@@ -27,7 +27,7 @@ class App extends React.Component {
   }
 
   onFilterSelect = (filterby) => {
-    fetch(`https://api-staging.feast-it.com/suppliers/browse/search?tier1=${filterby}`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://api-staging.feast-it.com/suppliers/browse/search?tier1=${filterby}`)
     .then((response) => {
       return response.json()
     }) 
