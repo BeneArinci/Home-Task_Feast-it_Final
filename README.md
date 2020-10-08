@@ -1,7 +1,9 @@
 ## My Feast-It Home Task
 
-I wanted to say thank you to Feast-it and the software engineering team for giving me the opportunity to work on this task, I really enjoyed it :smile:<br>
-I developed this web-app using create-react-app. In order to download this project and be up and running clone the repository and run:
+This project was a tech task I was recently asked to work on (end of September 2020). It was really interesting to have the opportunity to challenge myself, put in practice my knowledge, and learn new things!<br>
+I was asked to give the possibility to a not-signed-in user to get access to a list of suppliers and add one or more extra functionalities.<br>
+I developed this web-app using **React** and, more specifically, the library **create-react-app**. I also had the opportunity to put into practice my newly built React testing skills using **Jest**<br>
+In order to download this project and be up and running with it, clone the repository and run:
 ```
 npm install
 ```
