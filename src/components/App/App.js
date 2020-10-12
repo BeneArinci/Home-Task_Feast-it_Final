@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import NavBar from './NavBar/NavBar';
-import SuppliersList from './SuppliersList/SuppliersList';
-import Filter from './Filter/Filter';
-import Scroll from './Scroll/Scroll';
-import LogIn from './LogIn/LogIn';
+import NavBar from '../NavBar/NavBar';
+import SuppliersList from '../SuppliersList/SuppliersList';
+import Filter from '../Filter/Filter';
+import Scroll from '../Scroll/Scroll';
+import LogIn from '../LogIn/LogIn';
 
 
 class App extends React.Component {
