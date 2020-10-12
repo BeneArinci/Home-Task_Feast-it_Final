@@ -1,4 +1,4 @@
-## My Feast-It Home Task
+## My Party-Planning Project
 
 This project was a tech task I was recently asked to work on (end of September 2020). It was really interesting to have the opportunity to challenge myself, put in practice my knowledge, and learn new things!<br>
 I was asked to give the possibility to a not-signed-in user to get access to a list of suppliers and add one or more extra functionalities.<br>
